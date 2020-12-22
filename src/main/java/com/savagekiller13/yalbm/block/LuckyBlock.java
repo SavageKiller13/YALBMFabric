@@ -1,5 +1,6 @@
 package com.savagekiller13.yalbm.block;
 
+import com.google.common.primitives.Ints;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,7 +17,7 @@ import java.util.Random;
 public class LuckyBlock extends Block {
 
 
-    public Integer[] itemRarity = {1,2,3,4,5,6,7};
+    public int[] itemRarity = {1,2,3,4,5,6,7};
 
     public Map<Item, Integer> itemDrops = new HashMap<>();
 
@@ -24,12 +25,22 @@ public class LuckyBlock extends Block {
         super(settings);
 
 
-        itemDrops.put(Items.APPLE, itemRarity[0]);
-        itemDrops.put(Items.DIAMOND, itemRarity[2]);
-        itemDrops.put(Items.GOLD_INGOT, itemRarity[1]);
+        itemDrops.put(Items.APPLE, itemRarity[2]);
+        itemDrops.put(Items.DIAMOND, itemRarity[4]);
+        itemDrops.put(Items.GOLD_INGOT, itemRarity[2]);
         itemDrops.put(Items.IRON_INGOT, itemRarity[1]);
-        itemDrops.put(Items.EMERALD, itemRarity[3]);
-        itemDrops.put(Items.SPONGE, itemRarity[3]);
+        itemDrops.put(Items.EMERALD, itemRarity[4]);
+        itemDrops.put(Items.SPONGE, itemRarity[5]);
+        itemDrops.put(Items.LAPIS_LAZULI, itemRarity[3]);
+        itemDrops.put(Items.EXPERIENCE_BOTTLE, itemRarity[5]);
+        itemDrops.put(Items.ENDER_EYE, itemRarity[6]);
+        itemDrops.put(Items.DIRT, itemRarity[6]);
+        itemDrops.put(Items.NAUTILUS_SHELL, itemRarity[5]);
+        itemDrops.put(Items.HEART_OF_THE_SEA, itemRarity[6]);
+        itemDrops.put(Items.REDSTONE, itemRarity[2]);
+        itemDrops.put(Items.NETHERITE_SCRAP, itemRarity[6]);
+        itemDrops.put(Items.EGG, itemRarity[4]);
+        itemDrops.put(Items.QUARTZ, itemRarity[3]);
     }
 
     @Override
@@ -49,22 +60,20 @@ public class LuckyBlock extends Block {
         Random rand = new Random();
 
         int item = rand.nextInt(listLength);
-        int chance;
-
-        chance = rand.nextInt(randomChance((Integer) list.values().toArray()[item]));
-
-        if (chance == 0) chance = 1;
 
         int[] itemAmountList = {64, 48, 32, 16, 8, 4, 2};
-        int itemAmount = 0;
-        int itemAmountNeeded;
+        int itemAmount;
 
-        
+        itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) list.values().toArray()[item])];
+
+        int itemAmountNeeded = rand.nextInt(itemAmount);
+
+        if (itemAmountNeeded == 0)  itemAmountNeeded = 1;
 
         Item neededItem = (Item) list.keySet().toArray()[item];
 
 
-        return new ItemStack(neededItem, itemAmount);
+        return new ItemStack(neededItem, itemAmountNeeded);
 
     }
 

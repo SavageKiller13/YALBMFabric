@@ -10,14 +10,14 @@
       "item": "minecraft:gold_ingot"
     },
     "I": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:diamond"
     },
     "A": {
-      "item": "minecraft:apple"
+      "item": "minecraft:golden_apple"
     }
   },
   "result": {
     "item": "yalbm:lucky_block",
-    "count": 4
+    "count": 1
   }
 }
