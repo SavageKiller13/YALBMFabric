@@ -1,11 +1,8 @@
 package com.savagekiller13.yalbm;
 
-import com.savagekiller13.yalbm.block.LuckyBlock;
 import com.savagekiller13.yalbm.registry.BlockRegistry;
+import com.savagekiller13.yalbm.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
 
 
 public class YALBMFabric implements ModInitializer {
@@ -18,7 +15,7 @@ public class YALBMFabric implements ModInitializer {
 		BlockRegistry.registerBlocks();
 		BlockRegistry.registerBlockItems();
 
-
+		ItemRegistry.registerItems();
 
 		System.out.println("Hello Fabric world!");
 	}

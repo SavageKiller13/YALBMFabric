@@ -1,6 +1,7 @@
 package com.savagekiller13.yalbm.block;
 
 import com.google.common.primitives.Ints;
+import com.savagekiller13.yalbm.registry.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,6 +42,7 @@ public class LuckyBlock extends Block {
         itemDrops.put(Items.NETHERITE_SCRAP, itemRarity[6]);
         itemDrops.put(Items.EGG, itemRarity[4]);
         itemDrops.put(Items.QUARTZ, itemRarity[3]);
+        itemDrops.put(ItemRegistry.ITEM_POOR_GOLD_APPLE, itemRarity[5]);
     }
 
     @Override
@@ -48,7 +50,9 @@ public class LuckyBlock extends Block {
         ItemStack stack = luckyDrop(itemDrops);
 
         if (!world.isClient()) {
-            dropStack(world, pos, stack);
+            if (!player.isCreative()) {
+                dropStack(world, pos, stack);
+            }
         }
 
         super.onBreak(world, pos, state, player);
