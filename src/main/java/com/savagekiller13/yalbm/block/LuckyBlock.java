@@ -1,6 +1,7 @@
 package com.savagekiller13.yalbm.block;
 
 import com.google.common.primitives.Ints;
+import com.savagekiller13.yalbm.registry.BlockRegistry;
 import com.savagekiller13.yalbm.registry.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,9 +24,10 @@ public class LuckyBlock extends Block {
 
     public Map<Item, Integer> itemDrops = new HashMap<>();
 
+
+
     public LuckyBlock(Settings settings) {
         super(settings);
-
 
         itemDrops.put(Items.APPLE, itemRarity[2]);
         itemDrops.put(Items.DIAMOND, itemRarity[4]);
