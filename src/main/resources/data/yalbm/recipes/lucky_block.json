@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "GIG",
-    "IAI",
-    "GIG"
+    "GDG",
+    "DAD",
+    "GDG"
   ],
   "key": {
     "G": {
       "item": "minecraft:gold_ingot"
     },
-    "I": {
+    "D": {
       "item": "minecraft:diamond"
     },
     "A": {
-      "item": "minecraft:golden_apple"
+      "item": "yalbm:poor_gold_apple"
     }
   },
   "result": {
