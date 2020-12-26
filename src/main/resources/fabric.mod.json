@@ -9,11 +9,11 @@
     "Savage_Killer13, Izz9"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/yalbm",
+    "sources": "https://github.com/SavageKiller13/YALBMFabric"
   },
 
-  "license": "CC0-1.0",
+  "license": "ISC License",
   "icon": "assets/yalbm/icon.png",
 
   "environment": "*",

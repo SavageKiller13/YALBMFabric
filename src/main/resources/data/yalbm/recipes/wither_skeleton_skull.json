@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SBS",
+    "BKB",
+    "SBS"
+  ],
+  "key": {
+    "S": {
+      "item": "yalbm:wither_skull_shard"
+    },
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "K": {
+      "item": "minecraft:skeleton_skull"
+    }
+  },
+  "result": {
+    "item": "minecraft:wither_skeleton_skull",
+    "count": 3
+  }
+}
