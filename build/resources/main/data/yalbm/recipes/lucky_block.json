@@ -10,7 +10,7 @@
       "item": "minecraft:gold_ingot"
     },
     "D": {
-      "item": "minecraft:diamond"
+      "tag": "c:diamond_nuggets"
     },
     "A": {
       "item": "yalbm:poor_gold_apple"

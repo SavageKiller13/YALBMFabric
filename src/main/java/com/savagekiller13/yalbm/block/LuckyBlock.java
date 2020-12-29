@@ -55,6 +55,7 @@ public class LuckyBlock extends Block {
         itemDrops.put(Items.SLIME_BALL, itemRarity[5]);
         itemDrops.put(ItemRegistry.ITEM_WITHER_SKULL_SHARD, itemRarity[4]);
         itemDrops.put(ItemRegistry.ITEM_SKELETON_SKULL_SHARD, itemRarity[3]);
+        itemDrops.put(ItemRegistry.ITEM_DIAMOND_SHARD, itemRarity[3]);
     }
 
     @Override

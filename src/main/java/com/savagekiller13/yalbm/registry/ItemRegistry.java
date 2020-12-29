@@ -20,10 +20,12 @@ public class ItemRegistry {
     public static final Item ITEM_POOR_GOLD_APPLE = new ItemPoorGoldApple((new Item.Settings()).group(ItemGroup.FOOD).food(poor_gold_apple));
     public static final Item ITEM_WITHER_SKULL_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MISC).maxCount(16));
     public static final Item ITEM_SKELETON_SKULL_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MISC).maxCount(16));
+    public static final Item ITEM_DIAMOND_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MATERIALS));
 
     public static void registerItems() {
         Registry.register(Registry.ITEM, new Identifier(modid, "poor_gold_apple"), ITEM_POOR_GOLD_APPLE);
         Registry.register(Registry.ITEM, new Identifier(modid, "wither_skull_shard"), ITEM_WITHER_SKULL_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "skeleton_skull_shard"), ITEM_SKELETON_SKULL_SHARD);
+        Registry.register(Registry.ITEM, new Identifier(modid, "diamond_shard"), ITEM_DIAMOND_SHARD);
     }
 }
