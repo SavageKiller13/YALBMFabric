@@ -1,6 +1,7 @@
 package com.savagekiller13.yalbm.registry;
 
 import com.savagekiller13.yalbm.YALBMFabric;
+import com.savagekiller13.yalbm.item.ItemCoin;
 import com.savagekiller13.yalbm.item.ItemPoorGoldApple;
 import com.savagekiller13.yalbm.item.ItemShard;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -21,11 +22,13 @@ public class ItemRegistry {
     public static final Item ITEM_WITHER_SKULL_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MISC).maxCount(16));
     public static final Item ITEM_SKELETON_SKULL_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MISC).maxCount(16));
     public static final Item ITEM_DIAMOND_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MATERIALS));
+    public static final Item ITEM_BASIC_COIN = new ItemCoin((new Item.Settings()).group(ItemGroup.MISC));
 
     public static void registerItems() {
         Registry.register(Registry.ITEM, new Identifier(modid, "poor_gold_apple"), ITEM_POOR_GOLD_APPLE);
         Registry.register(Registry.ITEM, new Identifier(modid, "wither_skull_shard"), ITEM_WITHER_SKULL_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "skeleton_skull_shard"), ITEM_SKELETON_SKULL_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "diamond_shard"), ITEM_DIAMOND_SHARD);
+        Registry.register(Registry.ITEM, new Identifier(modid, "coin"), ITEM_BASIC_COIN);
     }
 }
