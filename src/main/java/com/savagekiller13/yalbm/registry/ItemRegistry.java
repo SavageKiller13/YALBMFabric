@@ -2,14 +2,14 @@ package com.savagekiller13.yalbm.registry;
 
 import com.savagekiller13.yalbm.YALBMFabric;
 import com.savagekiller13.yalbm.item.ItemCoin;
+import com.savagekiller13.yalbm.item.ItemLuckySword;
 import com.savagekiller13.yalbm.item.ItemPoorGoldApple;
 import com.savagekiller13.yalbm.item.ItemShard;
+import com.savagekiller13.yalbm.special.ToolMaterialLucky;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ItemRegistry {
@@ -24,11 +24,14 @@ public class ItemRegistry {
     public static final Item ITEM_DIAMOND_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MATERIALS));
     public static final Item ITEM_BASIC_COIN = new ItemCoin((new Item.Settings()).group(ItemGroup.MISC));
 
+    public static final Item ITEM_LUCKY_SWORD = new ItemLuckySword(ToolMaterialLucky.COMMON, 7, -3.9F, (new Item.Settings()).group(ItemGroup.TOOLS).rarity(Rarity.COMMON));
+
     public static void registerItems() {
         Registry.register(Registry.ITEM, new Identifier(modid, "poor_gold_apple"), ITEM_POOR_GOLD_APPLE);
         Registry.register(Registry.ITEM, new Identifier(modid, "wither_skull_shard"), ITEM_WITHER_SKULL_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "skeleton_skull_shard"), ITEM_SKELETON_SKULL_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "diamond_shard"), ITEM_DIAMOND_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "coin"), ITEM_BASIC_COIN);
+        Registry.register(Registry.ITEM, new Identifier(modid, "lucky_sword_common"), ITEM_LUCKY_SWORD);
     }
 }

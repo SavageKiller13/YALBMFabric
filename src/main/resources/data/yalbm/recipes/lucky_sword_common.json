@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CGC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "yalbm:coin"
+    },
+    "G": {
+      "item": "minecraft:golden_sword"
+    }
+  },
+  "result": {
+    "item": "yalbm:lucky_sword_common"
+  }
+}
