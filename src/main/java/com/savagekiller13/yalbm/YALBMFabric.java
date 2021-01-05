@@ -12,8 +12,7 @@ public class YALBMFabric implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		BlockRegistry.registerBlocks();
-		BlockRegistry.registerBlockItems();
+		BlockRegistry.register();
 
 		ItemRegistry.registerItems();
 

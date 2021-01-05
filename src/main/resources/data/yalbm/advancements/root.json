@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "yalbm:lucky_block"
+    },
+    "title": {
+      "translate": "advancements.yalbm.root"
+    },
+    "description": {
+      "translate": "advancements.yalbm.root.desc"
+    },
+    "background": "minecraft:textures/block/gold_block.png",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "lucky_block_placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "yalbm:lucky_block"
+      }
+    }
+  }
+}

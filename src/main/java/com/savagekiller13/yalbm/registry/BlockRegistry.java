@@ -27,4 +27,9 @@ public class BlockRegistry {
         }
     }
 
+    public static void register() {
+        registerBlocks();
+        registerBlockItems();
+    }
+
 }
