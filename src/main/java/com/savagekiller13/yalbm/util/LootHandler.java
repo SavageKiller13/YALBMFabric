@@ -39,20 +39,25 @@ public class LootHandler {
         Item neededItem = (Item) list.keySet().toArray()[item];
 
         if (neededItem == Items.ENCHANTED_BOOK) {
-            addEnchant(neededItem, Enchantments.FORTUNE, 10);
+
+            return addEnchant(neededItem, Enchantments.FORTUNE, 10);
+
+        } else {
+            return new ItemStack(neededItem, itemAmountNeeded);
         }
 
-        return new ItemStack(neededItem, itemAmountNeeded);
+
 
     }
 
-    public static void addEnchant(Item item, Enchantment enchant, Integer level) {
-        ItemStack stack = new ItemStack(item);
+    public static ItemStack addEnchant(Item item, Enchantment enchant, Integer level) {
+        ItemStack stack = new ItemStack(item, 1);
 
         Map<Enchantment, Integer> enchantList = new HashMap<>();
         enchantList.put(enchant, level);
 
         EnchantmentHelper.set(enchantList, stack);
+        return stack;
     }
 
 }
