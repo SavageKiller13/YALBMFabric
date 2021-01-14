@@ -1,11 +1,10 @@
-package com.savagekiller13.yalbm.special;
+package com.savagekiller13.yalbm.Enum;
 
 import com.savagekiller13.yalbm.registry.ItemRegistry;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
 
-import javax.swing.*;
 import java.util.function.Supplier;
 
 public enum ToolMaterialLucky implements ToolMaterial {
