@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "C C",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "yalbm:coin"
+    }
+  },
+  "result": {
+    "item": "yalbm:rare_coin",
+    "count": 1
+  }
+}
