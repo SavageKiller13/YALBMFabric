@@ -11,6 +11,9 @@ public enum ToolMaterialLucky implements ToolMaterial {
 
     COMMON(5, 9001, 20.0F, 2.0F, 100, () -> {
         return Ingredient.ofItems(ItemRegistry.ITEM_BASIC_COIN);
+    }),
+    UNCOMMON(5, 11000, 22.0F, 4.0F, 100, () -> {
+        return Ingredient.ofItems(ItemRegistry.ITEM_RARE_COIN);
     });
 
 

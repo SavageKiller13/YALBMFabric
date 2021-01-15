@@ -4,9 +4,10 @@
   "package": "com.savagekiller13.yalbm.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinFortuneLevel"
   ],
   "client": [
-    "ExampleMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1

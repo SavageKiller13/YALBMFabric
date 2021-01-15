@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "yalbm:item/lucky_sword_uncommon"
+  }
+}

@@ -7,6 +7,7 @@
   "item.yalbm.coin": "Coin",
   "item.yalbm.rare_coin": "Coin",
   "item.yalbm.lucky_sword_common": "Lucky Sword",
+  "item.yalbm.lucky_sword_uncommon": "Lucky Sword",
 
   "advancements.yalbm.root": "Lucky Blocks!",
   "advancements.yalbm.root.desc": "Place a lucky Block"

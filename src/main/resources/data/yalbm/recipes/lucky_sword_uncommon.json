@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CSC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "yalbm:rare_coin"
+    },
+    "S": {
+      "item": "yalbm:lucky_sword_common"
+    }
+  },
+  "result": {
+    "item": "yalbm:lucky_sword_uncommon"
+  }
+}

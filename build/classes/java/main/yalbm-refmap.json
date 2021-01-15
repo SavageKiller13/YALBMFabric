@@ -1,13 +1,13 @@
 {
   "mappings": {
-    "com/savagekiller13/yalbm/mixin/ExampleMixin": {
-      "init()V": "Lnet/minecraft/class_442;method_25426()V"
+    "com/savagekiller13/yalbm/mixin/MixinFortuneLevel": {
+      "getMaxLevel()I": "Lnet/minecraft/class_1896;method_8183()I"
     }
   },
   "data": {
     "named:intermediary": {
-      "com/savagekiller13/yalbm/mixin/ExampleMixin": {
-        "init()V": "Lnet/minecraft/class_442;method_25426()V"
+      "com/savagekiller13/yalbm/mixin/MixinFortuneLevel": {
+        "getMaxLevel()I": "Lnet/minecraft/class_1896;method_8183()I"
       }
     }
   }
