@@ -15,6 +15,8 @@ public class BlockRegistry {
 
     public static final Block BLOCK_LUCKY = new LuckyBlock(FabricBlockSettings.of(Material.STONE).hardness(0.5f));
 
+
+
     public static void registerBlocks() {
         {
             Registry.register(Registry.BLOCK, new Identifier(YALBMFabric.modid, "lucky_block"), BLOCK_LUCKY);

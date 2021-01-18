@@ -27,6 +27,8 @@ public class ItemRegistry {
     public static final Item ITEM_LUCKY_SWORD = new ItemLuckySword(ToolMaterialLucky.COMMON, 7, -3.0F, (new Item.Settings()).group(ItemGroup.COMBAT).rarity(Rarity.COMMON));
     public static final Item ITEM_UNCOMMON_LUCKY_SWORD = new ItemLuckySword(ToolMaterialLucky.UNCOMMON, 12, -2.0F, (new Item.Settings()).group(ItemGroup.COMBAT).rarity(Rarity.COMMON));
 
+
+
     public static void registerItems() {
         Registry.register(Registry.ITEM, new Identifier(modid, "poor_gold_apple"), ITEM_POOR_GOLD_APPLE);
         Registry.register(Registry.ITEM, new Identifier(modid, "wither_skull_shard"), ITEM_WITHER_SKULL_SHARD);

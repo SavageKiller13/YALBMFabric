@@ -40,7 +40,7 @@ public class LootHandler {
 
         if (neededItem == Items.ENCHANTED_BOOK) {
 
-            return addEnchant(neededItem, Enchantments.FORTUNE, 10);
+            return addEnchant(neededItem, Enchantments.FORTUNE, 5);
 
         } else {
             return new ItemStack(neededItem, itemAmountNeeded);
