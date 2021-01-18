@@ -15,7 +15,7 @@ public class MixinFortuneLevel {
 
 	@Inject(method = "getMaxLevel()I", at = @At("RETURN"), cancellable = true)
 	private void injected(CallbackInfoReturnable<Integer> cir) {
-		cir.setReturnValue(10);
+		cir.setReturnValue(5);
 	}
 
 }
