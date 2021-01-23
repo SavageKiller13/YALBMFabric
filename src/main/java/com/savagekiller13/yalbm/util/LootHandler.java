@@ -7,6 +7,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.Map;
 import java.util.Random;
 
@@ -28,6 +31,8 @@ public class LootHandler {
         Random rand = new Random();
         double chance = rand.nextDouble();
 
+        double dropChance = new BigDecimal(chance, new MathContext(2, RoundingMode.HALF_DOWN)).doubleValue();
+
         int[] itemAmountList = {64, 48, 32, 16, 8, 4, 2, 1};
         int itemAmount;
         int itemAmountNeeded;
@@ -41,7 +46,7 @@ public class LootHandler {
 
         ItemStack stack = new ItemStack(Items.AIR, 1);
 
-        if (chance >= 0.00 && chance <= 0.55) {
+        if (dropChance >= 0.00 && dropChance <= 0.55) {
             item = rand.nextInt(commonLength);
             itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) commonDrops.values().toArray()[item])];
             itemAmountNeeded = rand.nextInt(itemAmount);
@@ -51,7 +56,7 @@ public class LootHandler {
             if (itemAmountNeeded == 0) itemAmountNeeded = 1;
 
             stack = new ItemStack(neededItem, itemAmountNeeded);
-        } else if (chance >= 0.56 && chance <= 0.75) {
+        } else if (dropChance >= 0.56 && dropChance <= 0.75) {
             item = rand.nextInt(uncommonLength);
             itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) uncommonDrops.values().toArray()[item])];
             itemAmountNeeded = rand.nextInt(itemAmount);
@@ -61,7 +66,7 @@ public class LootHandler {
             if (itemAmountNeeded == 0) itemAmountNeeded = 1;
 
             stack = new ItemStack(neededItem, itemAmountNeeded);
-        } else if (chance >= 0.76 && chance <= 0.90) {
+        } else if (dropChance >= 0.76 && dropChance <= 0.90) {
             item = rand.nextInt(rareLength);
             itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) rareDrops.values().toArray()[item])];
             itemAmountNeeded = rand.nextInt(itemAmount);
@@ -71,7 +76,7 @@ public class LootHandler {
             if (itemAmountNeeded == 0) itemAmountNeeded = 1;
 
             stack = new ItemStack(neededItem, itemAmountNeeded);
-        } else if (chance >= 0.91 && chance <= 0.98) {
+        } else if (dropChance >= 0.91 && dropChance <= 0.98) {
             item = rand.nextInt(epicLength);
             itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) epicDrops.values().toArray()[item])];
             itemAmountNeeded = rand.nextInt(itemAmount);
@@ -81,7 +86,7 @@ public class LootHandler {
             if (itemAmountNeeded == 0) itemAmountNeeded = 1;
 
             stack = new ItemStack(neededItem, itemAmountNeeded);
-        } else if (chance >= 0.99 && chance <= 1.00) {
+        } else if (dropChance >= 0.99 && dropChance <= 1.00) {
             item = rand.nextInt(trollLength);
             itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) trollDrops.values().toArray()[item])];
             itemAmountNeeded = rand.nextInt(itemAmount);
