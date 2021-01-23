@@ -16,7 +16,7 @@ public class LuckyBlock extends Block {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        ItemStack stack = LootHandler.luckyDrop(LootHandler.itemDrops);
+        ItemStack stack = LootHandler.luckyItemDrop();
 
         if (!world.isClient()) {
             if (!player.isCreative()) {
