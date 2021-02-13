@@ -23,10 +23,10 @@ public class ItemRegistry {
     public static final Item ITEM_DIAMOND_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MATERIALS));
     public static final Item ITEM_BASIC_COIN = new ItemCoin((new Item.Settings()).group(ItemGroup.MISC));
     public static final Item ITEM_RARE_COIN = new ItemCoin((new Item.Settings()).group(ItemGroup.MISC));
+    public static final Item ITEM_LUCKY_BLOCK_SHARD = new ItemShard((new Item.Settings()).group(ItemGroup.MISC));
 
     public static final Item ITEM_LUCKY_SWORD = new ItemLuckySword(ToolMaterialLucky.COMMON, 7, -3.0F, (new Item.Settings()).group(ItemGroup.COMBAT).rarity(Rarity.COMMON));
     public static final Item ITEM_UNCOMMON_LUCKY_SWORD = new ItemLuckySword(ToolMaterialLucky.UNCOMMON, 12, -2.0F, (new Item.Settings()).group(ItemGroup.COMBAT).rarity(Rarity.COMMON));
-
 
 
     public static void registerItems() {
@@ -36,6 +36,7 @@ public class ItemRegistry {
         Registry.register(Registry.ITEM, new Identifier(modid, "diamond_shard"), ITEM_DIAMOND_SHARD);
         Registry.register(Registry.ITEM, new Identifier(modid, "coin"), ITEM_BASIC_COIN);
         Registry.register(Registry.ITEM, new Identifier(modid, "rare_coin"), ITEM_RARE_COIN);
+        Registry.register(Registry.ITEM, new Identifier(modid, "lucky_block_shard"), ITEM_LUCKY_BLOCK_SHARD);
 
         Registry.register(Registry.ITEM, new Identifier(modid, "lucky_sword_common"), ITEM_LUCKY_SWORD);
         Registry.register(Registry.ITEM, new Identifier(modid, "lucky_sword_uncommon"), ITEM_UNCOMMON_LUCKY_SWORD);

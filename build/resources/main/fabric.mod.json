@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "yalbm",
-  "version": "1.1.6",
+  "version": "1.1.9",
 
   "name": "Yet Another Lucky BLock Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.savagekiller13.yalbm.YALBMFabric"
+    ],
+    "rei_plugins": [
+
     ]
   },
   "mixins": [

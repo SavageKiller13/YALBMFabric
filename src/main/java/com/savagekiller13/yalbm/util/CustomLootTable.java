@@ -2,6 +2,7 @@ package com.savagekiller13.yalbm.util;
 
 import com.savagekiller13.yalbm.registry.BlockRegistry;
 import com.savagekiller13.yalbm.registry.ItemRegistry;
+import jdk.nashorn.internal.ir.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -24,7 +25,7 @@ public class CustomLootTable  {
 
     public static Map<Enchantment, Integer> enchantmentList = new HashMap<>();
 
-    public static Item[] moddedBlockDropsAsItem = {BlockRegistry.BLOCK_LUCKY.asItem()};
+    public static Item[] moddedBlockDropsAsItem = {BlockRegistry.BLOCK_LUCKY.asItem(), BlockRegistry.MORNING_WOOD.asItem()};
 
     public static HashMap<Item, Integer> getCommonDrops() {
         commonDrops.clear();
@@ -89,17 +90,20 @@ public class CustomLootTable  {
         trollDrops.clear();
 
         trollDrops.put(Items.DIRT, itemRarity[6]);
+        trollDrops.put(moddedBlockDropsAsItem[1], itemRarity[7]);
 
         return (HashMap<Item, Integer>) trollDrops;
     }
 
-    public static HashMap<Enchantment, Integer> getEnchantmentList() {
+    /*public static HashMap<Enchantment, Integer> getEnchantmentList() {
         enchantmentList.clear();
 
-        enchantmentList.put(Enchantments.FORTUNE, 5);
+        enchantmentList.put(Enchantments.FORTUNE, 3);
+        enchantmentList.put(Enchantments.SHARPNESS, 5);
+        enchantmentList.put(Enchantments.LOOTING, 3);
 
         return (HashMap<Enchantment, Integer>) enchantmentList;
-    }
+    }*/
 
 
 }

@@ -1,5 +1,4 @@
 {
-  "block.yalbm.lucky_block": "Lucky Block",
   "item.yalbm.poor_gold_apple": "Poor Gold Apple",
   "item.yalbm.wither_skull_shard": "Wither Skull Shard",
   "item.yalbm.skeleton_skull_shard": "Skeleton Skull Shard",
@@ -8,7 +7,13 @@
   "item.yalbm.rare_coin": "Coin",
   "item.yalbm.lucky_sword_common": "Lucky Sword",
   "item.yalbm.lucky_sword_uncommon": "Lucky Sword",
+  "item.yalbm.lucky_block_shard": "Block Shard",
+
+  "block.yalbm.lucky_block": "Lucky Block",
+  "block.yalbm.morning_wood": "Morning Wood",
 
   "advancements.yalbm.root": "Lucky Blocks!",
-  "advancements.yalbm.root.desc": "Place a lucky Block"
+  "advancements.yalbm.root.desc": "Place a lucky Block",
+  "advancements.yalbm.morning_wood": "I HAVE MORNING WOOD!",
+  "advancements.yalbm.morning_wood.desc": "Obtain the Morning Wood Block"
 }

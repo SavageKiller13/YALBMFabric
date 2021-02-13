@@ -25,7 +25,7 @@ public class LootHandler {
     public static Map<Item, Integer> epicDrops = CustomLootTable.getEpicDrops();
     public static Map<Item, Integer> trollDrops = CustomLootTable.getTrollDrops();
 
-    public static Map<Enchantment, Integer> enchantmentList = CustomLootTable.getEnchantmentList();
+    //public static Map<Enchantment, Integer> enchantmentList = CustomLootTable.getEnchantmentList();
 
     public static ItemStack luckyItemDrop() {
         Random rand = new Random();
@@ -102,12 +102,16 @@ public class LootHandler {
 
     }
 
-    public static ItemStack dropEnchant(Map<Enchantment, Integer> enchantList) {
+    /*public static ItemStack dropEnchant(Map<Enchantment, Integer> enchantList) {
         ItemStack stack = new ItemStack(Items.ENCHANTED_BOOK);
+        int enchantListLength = enchantList.size();
+        Random rand = new Random();
+
+        int enchantNeeded = rand.nextInt(enchantListLength);
 
         EnchantmentHelper.set(enchantList, stack);
         return stack;
-    }
+    }*/
 
 }
 

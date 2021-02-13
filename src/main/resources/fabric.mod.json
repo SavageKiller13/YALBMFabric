@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.savagekiller13.yalbm.YALBMFabric"
+    ],
+    "rei_plugins": [
+
     ]
   },
   "mixins": [

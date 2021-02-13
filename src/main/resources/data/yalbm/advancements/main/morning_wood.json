@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "yalbm:morning_wood"
+    },
+    "title": {
+      "translate": "advancements.yalbm.morning_wood"
+    },
+    "description": {
+      "translate": "advancements.yalbm.morning_wood.desc"
+    },
+    "frame": "goal",
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "yalbm:main/root",
+  "criteria": {
+    "morning_wood_achieved": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "yalbm:morning_wood"
+      }
+    }
+  }
+}
