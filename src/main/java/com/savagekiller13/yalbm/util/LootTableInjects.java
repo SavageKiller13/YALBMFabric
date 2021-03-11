@@ -1,3 +1,5 @@
+// Command for testing Loot Tables (/setblock ~ ~ ~ minecraft:chest{LootTable:"minecraft:chests/desert_pyramid"})
+
 package com.savagekiller13.yalbm.util;
 
 import com.google.common.collect.Lists;
@@ -5,29 +7,20 @@ import com.savagekiller13.yalbm.registry.ItemRegistry;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.FabricLootSupplierBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
-import net.minecraft.loot.ConstantLootTableRange;
+import net.minecraft.loot.UniformLootTableRange;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.util.Identifier;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.List;
-import java.util.Random;
 
 public class LootTableInjects {
     private static final List<LootTableInsert> TABLE_INSERTS = Lists.newArrayList();
 
-    static Random rand = new Random();
-
-    public static int randomRoll(int maxRolls) {
-        int itemRolls = rand.nextInt(maxRolls);
-        if (itemRolls == 0) itemRolls = 1;
-        return itemRolls;
-    }
-
     public static void registerLootCallBacks() {
 
-        FabricLootPoolBuilder LUCKY_BLOCK_SHARD = FabricLootPoolBuilder.builder().rolls(ConstantLootTableRange.create(randomRoll(4))).with(ItemEntry.builder(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD)).withCondition(RandomChanceLootCondition.builder(0.8f).build());
+        FabricLootPoolBuilder LUCKY_BLOCK_SHARD = FabricLootPoolBuilder.builder().rolls(UniformLootTableRange.between(1, 4)).withCondition(RandomChanceLootCondition.builder(0.8f).build()).with(ItemEntry.builder(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD));
 
         insert(new LootTableInsert(LUCKY_BLOCK_SHARD, new Identifier("minecraft", "chests/end_city_treasure"), new Identifier("minecraft", "chests/desert_pyramid")));
 
