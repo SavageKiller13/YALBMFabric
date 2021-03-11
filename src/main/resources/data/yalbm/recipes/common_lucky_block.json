@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SIS",
+    "IAI",
+    "SIS"
+  ],
+  "key": {
+    "S": {
+      "item": "yalbm:lucky_block_shard"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "A": {
+      "item": "yalbm:poor_gold_apple"
+    }
+  },
+  "result": {
+    "item": "yalbm:common_lucky_block",
+    "count": 1
+  }
+}

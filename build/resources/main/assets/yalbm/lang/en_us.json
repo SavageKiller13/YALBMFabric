@@ -12,6 +12,10 @@
   "block.yalbm.lucky_block": "Lucky Block",
   "block.yalbm.morning_wood": "Morning Wood",
   "block.yalbm.common_lucky_block": "Common Lucky Block",
+  "block.yalbm.uncommon_lucky_block": "Uncommon Lucky Block",
+  "block.yalbm.rare_lucky_block": "Rare Lucky Block",
+  "block.yalbm.epic_lucky_block": "Epic Lucky Block",
+  "block.yalbm.special_lucky_block": "\"Special Block\"",
 
   "advancements.yalbm.root": "Lucky Blocks!",
   "advancements.yalbm.root.desc": "Place a lucky Block",

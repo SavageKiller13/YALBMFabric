@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SNS",
+        "NLN",
+        "SNS"
+    ],
+    "key": {
+        "S": {
+            "item": "yalbm:lucky_block_shard"
+        },
+        "N": {
+            "item": "minecraft:netherite_scrap"
+        },
+        "L": {
+            "item": "yalbm:rare_lucky_block"
+        }
+    },
+    "result": {
+        "item": "yalbm:epic_lucky_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SDS",
+        "DLD",
+        "SDS"
+    ],
+    "key": {
+        "S": {
+            "item": "yalbm:lucky_block_shard"
+        },
+        "D": {
+            "tag": "c:diamond_nuggets"
+        },
+        "L": {
+            "item": "yalbm:uncommon_lucky_block"
+        }
+    },
+    "result": {
+        "item": "yalbm:rare_lucky_block",
+        "count": 1
+    }
+}

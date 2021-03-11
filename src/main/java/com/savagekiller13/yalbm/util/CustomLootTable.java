@@ -23,7 +23,7 @@ public class CustomLootTable  {
 
     public static Map<Enchantment, Integer> enchantmentList = new HashMap<>();
 
-    public static Item[] moddedBlockDropsAsItem = {BlockRegistry.BLOCK_LUCKY.asItem(), BlockRegistry.MORNING_WOOD.asItem()};
+    public static Item[] moddedBlockDropsAsItem = {BlockRegistry.BLOCK_LUCKY.asItem(), BlockRegistry.MORNING_WOOD.asItem(), BlockRegistry.SPECIAL_LUCKY_BLOCK.asItem()};
 
     public static int[] itemAmountList = {64, 48, 32, 16, 8, 4, 2, 1};
 
@@ -39,6 +39,7 @@ public class CustomLootTable  {
         commonDrops.put(Items.GLOWSTONE_DUST, itemRarity[3]);
         commonDrops.put(Items.GLOWSTONE, itemRarity[5]);
         commonDrops.put(Items.QUARTZ, itemRarity[3]);
+        commonDrops.put(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD, itemRarity[5]);
 
         return (HashMap<Item, Integer>) commonDrops;
     }
@@ -47,7 +48,6 @@ public class CustomLootTable  {
         uncommonDrops.clear();
 
         uncommonDrops.put(ItemRegistry.ITEM_SKELETON_SKULL_SHARD, itemRarity[3]);
-        uncommonDrops.put(moddedBlockDropsAsItem[0], itemRarity[6]);
         uncommonDrops.put(Items.GOLD_INGOT, itemRarity[2]);
         uncommonDrops.put(Items.REDSTONE, itemRarity[2]);
         uncommonDrops.put(Items.SLIME_BALL, itemRarity[5]);
@@ -56,6 +56,7 @@ public class CustomLootTable  {
         uncommonDrops.put(Items.OBSIDIAN, itemRarity[4]);
         uncommonDrops.put(Items.BLAZE_POWDER, itemRarity[4]);
         uncommonDrops.put(ItemRegistry.ITEM_POOR_GOLD_APPLE, itemRarity[4]);
+        uncommonDrops.put(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD, itemRarity[4]);
 
         return (HashMap<Item, Integer>) uncommonDrops;
     }
@@ -70,6 +71,7 @@ public class CustomLootTable  {
         rareDrops.put(Items.NAUTILUS_SHELL, itemRarity[5]);
         rareDrops.put(Items.EXPERIENCE_BOTTLE, itemRarity[5]);
         rareDrops.put(Items.RABBIT_FOOT, itemRarity[5]);
+        rareDrops.put(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD, itemRarity[4]);
 
         return (HashMap<Item, Integer>) rareDrops;
     }
@@ -82,6 +84,8 @@ public class CustomLootTable  {
         epicDrops.put(Items.NETHERITE_SCRAP, itemRarity[6]);
         epicDrops.put(Items.GHAST_TEAR, itemRarity[5]);
         epicDrops.put(ItemRegistry.ITEM_WITHER_SKULL_SHARD, itemRarity[4]);
+        epicDrops.put(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD, itemRarity[3]);
+        epicDrops.put(moddedBlockDropsAsItem[0], itemRarity[6]);
 
         return (HashMap<Item, Integer>) epicDrops;
     }
@@ -91,6 +95,7 @@ public class CustomLootTable  {
 
         trollDrops.put(Items.DIRT, itemRarity[6]);
         trollDrops.put(moddedBlockDropsAsItem[1], itemRarity[7]);
+        trollDrops.put(moddedBlockDropsAsItem[2], itemRarity[7]);
 
         return (HashMap<Item, Integer>) trollDrops;
     }
