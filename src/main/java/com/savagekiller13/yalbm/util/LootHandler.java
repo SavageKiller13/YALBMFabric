@@ -15,8 +15,6 @@ import java.util.Random;
 
 public class LootHandler {
 
-
-
     public static int[] itemRarity = CustomLootTable.itemRarity;
 
     public static Map<Item, Integer> commonDrops = CustomLootTable.getCommonDrops();
@@ -24,6 +22,8 @@ public class LootHandler {
     public static Map<Item, Integer> rareDrops = CustomLootTable.getRareDrops();
     public static Map<Item, Integer> epicDrops = CustomLootTable.getEpicDrops();
     public static Map<Item, Integer> trollDrops = CustomLootTable.getTrollDrops();
+
+    public static int[] itemAmountList = CustomLootTable.itemAmountList;
 
     //public static Map<Enchantment, Integer> enchantmentList = CustomLootTable.getEnchantmentList();
 
@@ -33,73 +33,42 @@ public class LootHandler {
 
         double dropChance = new BigDecimal(chance, new MathContext(2, RoundingMode.HALF_DOWN)).doubleValue();
 
-        int[] itemAmountList = {64, 48, 32, 16, 8, 4, 2, 1};
-        int itemAmount;
-        int itemAmountNeeded;
-        int item;
-
-        int commonLength = commonDrops.size();
-        int uncommonLength = uncommonDrops.size();
-        int rareLength =  rareDrops.size();
-        int epicLength = epicDrops.size();
-        int trollLength = trollDrops.size();
-
         ItemStack stack = new ItemStack(Items.AIR, 1);
 
         if (dropChance >= 0.00 && dropChance <= 0.55) {
-            item = rand.nextInt(commonLength);
-            itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) commonDrops.values().toArray()[item])];
-            itemAmountNeeded = rand.nextInt(itemAmount);
-
-            Item neededItem = (Item) commonDrops.keySet().toArray()[item];
-
-            if (itemAmountNeeded == 0) itemAmountNeeded = 1;
-
-            stack = new ItemStack(neededItem, itemAmountNeeded);
+            stack = getItemDrop(commonDrops);
         } else if (dropChance >= 0.56 && dropChance <= 0.75) {
-            item = rand.nextInt(uncommonLength);
-            itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) uncommonDrops.values().toArray()[item])];
-            itemAmountNeeded = rand.nextInt(itemAmount);
-
-            Item neededItem = (Item) uncommonDrops.keySet().toArray()[item];
-
-            if (itemAmountNeeded == 0) itemAmountNeeded = 1;
-
-            stack = new ItemStack(neededItem, itemAmountNeeded);
+            stack = getItemDrop(uncommonDrops);
         } else if (dropChance >= 0.76 && dropChance <= 0.90) {
-            item = rand.nextInt(rareLength);
-            itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) rareDrops.values().toArray()[item])];
-            itemAmountNeeded = rand.nextInt(itemAmount);
-
-            Item neededItem = (Item) rareDrops.keySet().toArray()[item];
-
-            if (itemAmountNeeded == 0) itemAmountNeeded = 1;
-
-            stack = new ItemStack(neededItem, itemAmountNeeded);
+            stack = getItemDrop(rareDrops);
         } else if (dropChance >= 0.91 && dropChance <= 0.98) {
-            item = rand.nextInt(epicLength);
-            itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) epicDrops.values().toArray()[item])];
-            itemAmountNeeded = rand.nextInt(itemAmount);
-
-            Item neededItem = (Item) epicDrops.keySet().toArray()[item];
-
-            if (itemAmountNeeded == 0) itemAmountNeeded = 1;
-
-            stack = new ItemStack(neededItem, itemAmountNeeded);
+            stack = getItemDrop(epicDrops);
         } else if (dropChance >= 0.99 && dropChance <= 1.00) {
-            item = rand.nextInt(trollLength);
-            itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) trollDrops.values().toArray()[item])];
-            itemAmountNeeded = rand.nextInt(itemAmount);
-
-            Item neededItem = (Item) trollDrops.keySet().toArray()[item];
-
-            if (itemAmountNeeded == 0) itemAmountNeeded = 1;
-
-            stack = new ItemStack(neededItem, itemAmountNeeded);
+            stack = getItemDrop(trollDrops);
         }
 
         return stack;
 
+    }
+
+    public static ItemStack getItemDrop(Map<Item, Integer> dropList) {
+        Random rand = new Random();
+        int item;
+        int itemAmount;
+        int itemAmountNeeded;
+
+        int dropListLength = dropList.size();
+
+        item = rand.nextInt(dropListLength);
+        itemAmount = itemAmountList[Ints.indexOf(itemRarity, (int) dropList.values().toArray()[item])];
+        itemAmountNeeded = rand.nextInt(itemAmount);
+
+        Item neededItem = (Item) dropList.keySet().toArray()[item];
+
+        if (itemAmountNeeded == 0) itemAmountNeeded = 1;
+
+
+        return new ItemStack(neededItem, itemAmountNeeded);
     }
 
     /*public static ItemStack dropEnchant(Map<Enchantment, Integer> enchantList) {
