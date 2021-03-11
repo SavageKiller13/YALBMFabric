@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "yalbm:block/common_lucky_block"
+    }
+  }
+}
