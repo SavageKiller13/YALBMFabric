@@ -12,12 +12,22 @@ import net.minecraft.util.Identifier;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.List;
+import java.util.Random;
 
 public class LootTableInjects {
     private static final List<LootTableInsert> TABLE_INSERTS = Lists.newArrayList();
 
+    static Random rand = new Random();
+
+    public static int randomRoll(int maxRolls) {
+        int itemRolls = rand.nextInt(maxRolls);
+        if (itemRolls == 0) itemRolls = 1;
+        return itemRolls;
+    }
+
     public static void registerLootCallBacks() {
-        FabricLootPoolBuilder LUCKY_BLOCK_SHARD = FabricLootPoolBuilder.builder().rolls(ConstantLootTableRange.create(3)).with(ItemEntry.builder(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD)).withCondition(RandomChanceLootCondition.builder(10.0f).build());
+
+        FabricLootPoolBuilder LUCKY_BLOCK_SHARD = FabricLootPoolBuilder.builder().rolls(ConstantLootTableRange.create(randomRoll(4))).with(ItemEntry.builder(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD)).withCondition(RandomChanceLootCondition.builder(0.8f).build());
 
         insert(new LootTableInsert(LUCKY_BLOCK_SHARD, new Identifier("minecraft", "chests/end_city_treasure"), new Identifier("minecraft", "chests/desert_pyramid")));
 

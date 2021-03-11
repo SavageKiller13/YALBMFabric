@@ -15,8 +15,6 @@ public class CustomLootTable  {
 
     public static int[] itemRarity = {1,2,3,4,5,6,7,8};
 
-    public static Map<Item, Integer> itemDrops = new HashMap<>();
-
     public static Map<Item, Integer> commonDrops = new HashMap<>();
     public static Map<Item, Integer> uncommonDrops = new HashMap<>();
     public static Map<Item, Integer> rareDrops = new HashMap<>();
@@ -26,6 +24,8 @@ public class CustomLootTable  {
     public static Map<Enchantment, Integer> enchantmentList = new HashMap<>();
 
     public static Item[] moddedBlockDropsAsItem = {BlockRegistry.BLOCK_LUCKY.asItem(), BlockRegistry.MORNING_WOOD.asItem()};
+
+    public static int[] itemAmountList = {64, 48, 32, 16, 8, 4, 2, 1};
 
     public static HashMap<Item, Integer> getCommonDrops() {
         commonDrops.clear();

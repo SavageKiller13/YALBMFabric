@@ -16,7 +16,7 @@ import net.minecraft.util.registry.Registry;
 public class BlockRegistry {
 
     public static final Block BLOCK_LUCKY = new LuckyBlock(FabricBlockSettings.of(Material.STONE).hardness(0.5f).sounds(BlockSoundGroup.WOOD));
-    public static final Block MORNING_WOOD = new MorningWood(FabricBlockSettings.of(Material.WOOD).hardness(0.25f));
+    public static final Block MORNING_WOOD = new MorningWood(FabricBlockSettings.of(Material.WOOD).hardness(0.25f).sounds(BlockSoundGroup.STONE));
 
 
     public static void registerBlocks() {
