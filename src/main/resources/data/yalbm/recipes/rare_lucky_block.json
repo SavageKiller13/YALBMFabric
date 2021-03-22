@@ -13,11 +13,11 @@
             "tag": "c:diamond_nuggets"
         },
         "L": {
-            "item": "yalbm:uncommon_lucky_block"
+            "item": "minecraft:golden_apple"
         }
     },
     "result": {
         "item": "yalbm:rare_lucky_block",
-        "count": 1
+        "count": 2
     }
 }

@@ -13,11 +13,11 @@
             "item": "minecraft:redstone"
         },
         "L": {
-            "item": "yalbm:common_lucky_block"
+            "item": "yalbm:poor_gold_apple"
         }
     },
     "result": {
         "item": "yalbm:uncommon_lucky_block",
-        "count": 1
+        "count": 2
     }
 }

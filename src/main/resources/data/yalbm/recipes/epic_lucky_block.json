@@ -10,14 +10,14 @@
             "item": "yalbm:lucky_block_shard"
         },
         "N": {
-            "item": "minecraft:netherite_scrap"
+            "item": "minecraft:diamond"
         },
         "L": {
-            "item": "yalbm:rare_lucky_block"
+            "item": "minecraft:golden_apple"
         }
     },
     "result": {
         "item": "yalbm:epic_lucky_block",
-        "count": 1
+        "count": 2
     }
 }

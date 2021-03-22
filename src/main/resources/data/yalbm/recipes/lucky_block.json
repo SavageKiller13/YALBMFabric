@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SCS",
+    "UDR",
+    "SES"
+  ],
+  "key": {
+    "S": {
+      "item": "yalbm:lucky_block_shard"
+    },
+    "C": {
+      "item": "yalbm:common_lucky_block"
+    },
+    "U": {
+      "item": "yalbm:uncommon_lucky_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "yalbm:rare_lucky_block"
+    },
+    "E": {
+      "item": "yalbm:epic_lucky_block"
+    }
+  },
+  "result": {
+    "item": "yalbm:lucky_block",
+    "count": 4
+  }
+}
