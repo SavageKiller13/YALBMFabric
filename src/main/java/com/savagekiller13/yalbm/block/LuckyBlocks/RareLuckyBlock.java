@@ -15,11 +15,13 @@ public class RareLuckyBlock extends Block {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        ItemStack stack = LootHandler.getItemDrop(LootHandler.rareDrops);
+        ItemStack[] stacks = LootHandler.MultiLuckyItemDrop(2, LootHandler.rareDrops);
 
         if (!world.isClient()) {
             if (!player.isCreative()) {
-                dropStack(world, pos, stack);
+                for (ItemStack stack : stacks) {
+                    dropStack(world, pos, stack);
+                }
             }
         }
 

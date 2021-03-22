@@ -51,8 +51,7 @@ public class LootHandler {
 
     public static ItemStack[] MultiLuckyItemDrop(int maxRolls) {
         Random rand = new Random();
-        int rolls = rand.nextInt(maxRolls);
-        if (rolls == 0) rolls += 1;
+        int rolls = rand.nextInt(maxRolls) + 1;
 
         ItemStack[] stacks = new ItemStack[rolls];
 
@@ -65,7 +64,17 @@ public class LootHandler {
     }
 
     public static ItemStack[] MultiLuckyItemDrop(int maxRolls, Map<Item, Integer> dropList) {
-        return new ItemStack[maxRolls];
+        Random rand = new Random();
+        int rolls = rand.nextInt(maxRolls) + 1;
+
+        ItemStack[] stacks = new ItemStack[rolls];
+
+        for (int i = 0; i < rolls; i++) {
+            ItemStack stack = getItemDrop(dropList);
+            stacks[i] = stack;
+        }
+
+        return stacks;
     }
 
     public static ItemStack getItemDrop(Map<Item, Integer> dropList) {

@@ -15,11 +15,13 @@ public class EpicLuckyBlock extends Block {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        ItemStack stack = LootHandler.getItemDrop(LootHandler.epicDrops);
+        ItemStack[] stacks = LootHandler.MultiLuckyItemDrop(2, LootHandler.epicDrops);
 
         if (!world.isClient()) {
             if (!player.isCreative()) {
-                dropStack(world, pos, stack);
+                for (ItemStack stack : stacks) {
+                    dropStack(world, pos, stack);
+                }
             }
         }
 

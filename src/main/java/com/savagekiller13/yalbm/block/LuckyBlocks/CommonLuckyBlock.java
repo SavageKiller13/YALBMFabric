@@ -19,11 +19,13 @@ public class CommonLuckyBlock extends Block {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        ItemStack stack = LootHandler.getItemDrop(LootHandler.commonDrops);
+        ItemStack[] stacks = LootHandler.MultiLuckyItemDrop(4, LootHandler.commonDrops);
 
         if (!world.isClient()) {
             if (!player.isCreative()) {
-                dropStack(world, pos, stack);
+                for (ItemStack stack : stacks) {
+                    dropStack(world, pos, stack);
+                }
             }
         }
 
