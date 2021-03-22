@@ -16,11 +16,13 @@ public class LuckyBlock extends Block {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        ItemStack stack = LootHandler.luckyItemDrop();
+        ItemStack[] stacks = LootHandler.MultiLuckyItemDrop(4);
 
         if (!world.isClient()) {
             if (!player.isCreative()) {
-                dropStack(world, pos, stack);
+                for (ItemStack stack : stacks) {
+                    dropStack(world, pos, stack);
+                }
             }
         }
 

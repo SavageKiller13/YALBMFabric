@@ -1,8 +1,6 @@
 package com.savagekiller13.yalbm.util;
 
 import com.google.common.primitives.Ints;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -49,6 +47,25 @@ public class LootHandler {
 
         return stack;
 
+    }
+
+    public static ItemStack[] MultiLuckyItemDrop(int maxRolls) {
+        Random rand = new Random();
+        int rolls = rand.nextInt(maxRolls);
+        if (rolls == 0) rolls += 1;
+
+        ItemStack[] stacks = new ItemStack[rolls];
+
+        for (int i = 0; i < rolls; i++) {
+            ItemStack stack = luckyItemDrop();
+            stacks[i] = stack;
+
+        }
+        return stacks;
+    }
+
+    public static ItemStack[] MultiLuckyItemDrop(int maxRolls, Map<Item, Integer> dropList) {
+        return new ItemStack[maxRolls];
     }
 
     public static ItemStack getItemDrop(Map<Item, Integer> dropList) {

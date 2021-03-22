@@ -21,8 +21,10 @@ public class LootTableInjects {
     public static void registerLootCallBacks() {
 
         FabricLootPoolBuilder LUCKY_BLOCK_SHARD = FabricLootPoolBuilder.builder().rolls(UniformLootTableRange.between(1, 4)).withCondition(RandomChanceLootCondition.builder(0.8f).build()).with(ItemEntry.builder(ItemRegistry.ITEM_LUCKY_BLOCK_SHARD));
+        FabricLootPoolBuilder POOR_GOLD_APPLE = FabricLootPoolBuilder.builder().rolls(UniformLootTableRange.between(1,3)).withCondition(RandomChanceLootCondition.builder(0.6f).build()).with(ItemEntry.builder(ItemRegistry.ITEM_POOR_GOLD_APPLE));
 
         insert(new LootTableInsert(LUCKY_BLOCK_SHARD, new Identifier("minecraft", "chests/end_city_treasure"), new Identifier("minecraft", "chests/desert_pyramid")));
+        insert(new LootTableInsert(POOR_GOLD_APPLE, new Identifier("minecraft", "chests/desert_pyramid"), new Identifier("minecraft", "chests/simple_dungeon"), new Identifier("minecraft", "chests/ruined_portal"), new Identifier("minecraft", "chests/village_temple"), new Identifier("minecraft", "chests/end_city_treasure")));
 
         LootTableLoadingCallback.EVENT.register(((resourceManager, lootManager, identifier, fabricLootSupplierBuilder, lootTableSetter) -> TABLE_INSERTS.forEach(i -> {
             if (ArrayUtils.contains(i.tables, identifier)) {
